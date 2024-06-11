@@ -1,5 +1,10 @@
 package com.csgp.cardatabase.domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import java.lang.annotation.Inherited;
 
 import javax.annotation.processing.Generated;
