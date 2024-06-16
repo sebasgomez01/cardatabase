@@ -15,6 +15,9 @@ import com.csgp.cardatabase.domain.CarRepository;
 import com.csgp.cardatabase.domain.OwnerRepository;
 import com.csgp.cardatabase.domain.Owner;
 
+import org.springframework.security.access.method.P;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 @SpringBootApplication
 public class CardatabaseApplication implements CommandLineRunner {
 
@@ -58,8 +61,9 @@ public class CardatabaseApplication implements CommandLineRunner {
 		}
 
 		// Username: user, password: user
-		urepository.save(new AppUser("user",
-		"$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue","USER"));
+		//String encodedPassword = PasswordEncoder.encode("user");
+		urepository.save(new AppUser("user", "$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue","USER"));
+
 		// Username: admin, password: admin
 		urepository.save(new AppUser("admin",
 		"$2a$10$8cjz47bjbR4Mn8GMg9IZx.vyjhLXR/SKKMSZ9.mP9vpMu0ssKi8GW", "ADMIN"));

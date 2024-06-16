@@ -37,9 +37,12 @@ public class LoginController {
         String jwts = jwtService.getToken(auth.getName());
 
         // construyo una respuesta con el token generado 
-        return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION, "Bearer" + jwts).header(HttpHeaders.
+        ResponseEntity<?> result = ResponseEntity.ok().header(
+                HttpHeaders.AUTHORIZATION, "Bearer " + jwts).header(HttpHeaders.
                 ACCESS_CONTROL_EXPOSE_HEADERS,
 "Authorization").build();
+
+        return result;
     }
     
 }
