@@ -14,11 +14,13 @@ import com.csgp.cardatabase.domain.Car;
 import com.csgp.cardatabase.domain.CarRepository;
 import com.csgp.cardatabase.domain.OwnerRepository;
 import com.csgp.cardatabase.domain.Owner;
-
 import org.springframework.security.access.method.P;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+
 
 @SpringBootApplication
+@EnableMethodSecurity
 public class CardatabaseApplication implements CommandLineRunner {
 
 	private static final Logger logger = LoggerFactory.getLogger(CardatabaseApplication.class);
