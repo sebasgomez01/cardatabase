@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.csgp.cardatabase.domain.CarRepository;
 import com.csgp.cardatabase.domain.Car;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController 
